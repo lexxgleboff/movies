@@ -1,16 +1,24 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import PropTypes from "prop-types";
 import Movie from "../Movie/Movie";
-// import { Row, Col } from 'antd';
+import { Alert } from "antd";
 import "./Movies.css";
 
-// eslint-disable-next-line react/prop-types
 export default function Movies({ movies }) {
-  // eslint-disable-next-line react/prop-types
-  const elements = movies.map((item) => {
-    const { id, ...itemProps } = item;
-    return <Movie key={id} {...itemProps}></Movie>;
-  });
+  const elements = movies.length ? (
+    movies.map((item) => {
+      const { id, ...itemProps } = item;
+      return <Movie key={id} {...itemProps}></Movie>;
+    })
+  ) : (
+    <Alert
+      message="invalid request - nothing found"
+      description="Please enter a valid request or enable VPN"
+      type="info"
+      showIcon
+    />
+  );
   return <div className="container">{elements}</div>;
 }
 

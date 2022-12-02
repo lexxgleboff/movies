@@ -13,15 +13,24 @@ export default function Movie({
   return (
     <div className="card">
       <div className="card__image">
-        <img
-          alt="poster"
-          src={`https://image.tmdb.org/t/p/w500${poster}`}
-          style={{ width: 180 }}
-        />
+        {poster === null ? (
+          <img
+            alt="poster"
+            src={`http://dummyimage.com/180x270/c0c0c0&text=${title}`}
+          />
+        ) : (
+          <img
+            alt="poster"
+            src={`https://image.tmdb.org/t/p/w500${poster}`}
+            style={{ width: 180 }}
+          />
+        )}
       </div>
       <div className="card__description">
         <h2 className="card__title">{title}</h2>
-        <span className="card__date">{format(new Date(date), "PP")}</span>
+        <span className="card__date">
+          {date ? format(new Date(date), "PP") : "release date unknown"}
+        </span>
         <Space>
           <span className="card__genre">Action</span>
           <span className="card__genre">Drama</span>
@@ -31,6 +40,10 @@ export default function Movie({
     </div>
   );
 }
+
+// Movie.defaultProps = {
+//   release_date: 'нет данных',
+// }
 
 Movie.propTypes = {
   title: PropTypes.string,

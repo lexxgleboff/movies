@@ -10,11 +10,8 @@
 
 .card__title {
     font-size: 20px;
-    /* padding-right: 15px; */
-    -webkit-line-clamp: 1; /* Число отображаемых строк */
-    display: -webkit-box; /* Включаем флексбоксы */
-    -webkit-box-orient: vertical; /* Вертикальная ориентация */
-    overflow: hidden; /* Обрезаем всё за пределами блока */
+    padding-right: 15px;
+
 }
 
 .card__date {
@@ -29,7 +26,7 @@
     line-height: 22px;
     padding: 1px;
     margin-top: 7px;
-    -webkit-line-clamp: 6; /* Число отображаемых строк */
+    -webkit-line-clamp: 4; /* Число отображаемых строк */
     display: -webkit-box; /* Включаем флексбоксы */
     -webkit-box-orient: vertical; /* Вертикальная ориентация */
     overflow: hidden; /* Обрезаем всё за пределами блока */
