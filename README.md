@@ -1,8 +1,11 @@
-# Getting Started with Create React App
+# MoviesApp - приложение по поиску и оценке фильмов на React + API themoviedb
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+link to Vercel: https://movies-lexxgleboff.vercel.app/
 
-## Available Scripts
+# Функционал
+
+- Реализован поиск фильмов по запросу пользователя
+- Страница разделена на табы с поиском и оцененные фильмы пользователя
 
 In the project directory, you can run:
 

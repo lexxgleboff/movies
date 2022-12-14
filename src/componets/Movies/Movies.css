@@ -1,6 +1,13 @@
 .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 450px));
+    display: flex;
+    flex-wrap: wrap;
     gap: 36px;
     justify-content: center;
 }
+
+@media (max-width: 450px) {
+    .container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
