@@ -2,31 +2,84 @@
     display: flex;
     box-shadow: 2px 3px 10px 0px rgb(0 0 0 / 20%);
     border-radius: 3px;
+    max-height: 270px;
 }
 
 .card__description {
-    padding: 12px 20px;
+    padding: 20px;
+    padding-top: 12px;
+    display: flex;
+    flex-direction: column;
+    /* width: 275px; */
+    position: relative;
 }
+
+.card__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+/* .card__description > div:first-child {
+    height: 30px;
+    width: 190px;
+    overflow: hidden;
+    position: relative;
+} */
 
 .card__title {
     font-size: 20px;
     padding-right: 15px;
-
+    margin-bottom: 0;
+    /* white-space: nowrap;
+    position: absolute;
+    transform: translateX(0);
+    transition: 4s linear; */
+    -webkit-line-clamp: 1; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
 }
+
+.card__rating {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #E9D100;
+}
+
+/* .card__rating::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #E9D100;
+} */
+
+/* .card__title:hover {
+    transform: translateX(calc(230px - 100%));
+} */
 
 .card__date {
     color: #827E7E;
     font-size: 12px;
     display: block;
-    margin-bottom: 7px;
+    margin-bottom: 10px;
 }
 
 .card__overview {
     font-size: 12px;
     line-height: 22px;
-    padding: 1px;
-    margin-top: 7px;
-    -webkit-line-clamp: 4; /* Число отображаемых строк */
+    /* padding: 1px; */
+    max-height: 100px;
+    margin-bottom: 0;
+    -webkit-line-clamp: 3; /* Число отображаемых строк */
     display: -webkit-box; /* Включаем флексбоксы */
     -webkit-box-orient: vertical; /* Вертикальная ориентация */
     overflow: hidden; /* Обрезаем всё за пределами блока */
@@ -39,4 +92,11 @@
     border: 1px solid #D9D9D9;
     border-radius: 2px;
     padding: 2px 5px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.card__genre-container {
+    display: flex;
+    flex-wrap: wrap;
 }

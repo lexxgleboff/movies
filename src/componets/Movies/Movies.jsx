@@ -9,7 +9,7 @@ export default function Movies({ movies }) {
   const elements = movies.length ? (
     movies.map((item) => {
       const { id, ...itemProps } = item;
-      return <Movie key={id} {...itemProps}></Movie>;
+      return <Movie key={id} id={id} {...itemProps}></Movie>;
     })
   ) : (
     <Alert
